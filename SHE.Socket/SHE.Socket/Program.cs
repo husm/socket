@@ -74,6 +74,15 @@ namespace SHE.Socket
             {
                 // Get the endpoint for the listener
                 IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, PORT);
+
+                //WriteInfoToConsole(localEndPoint);
+
+                // TODO: Use config file to setup the settings
+                SocketListenerSettings socketListenerSettings = new SocketListenerSettings(MAX_CONNECTIONS,
+                    ALLOW_EXCESS_SAEA, BACKLOG_SIZE, MAX_ACCEPT_OPS,
+                    RECEIVE_PREFIX_LENGTH, TEST_BUFFER_SIZE, SEND_PREFIX_LENGTH, BUFFER_MANAGERS,
+                    localEndPoint);
+
             }
             catch (Exception ex)
             {
