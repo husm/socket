@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SHE.Socket
+namespace SHE.GprsSocket
 {
     class Program
     {
@@ -68,12 +68,25 @@ namespace SHE.Socket
         /// </summary>
         public static Int32 maxConnectedClients = 0;
 
+        public static object lockerForList = new Object();
+
         static void Main(string[] args)
         {
             try
             {
                 // Get the endpoint for the listener
                 IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, PORT);
+
+                //WriteInfoToConsole(localEndPoint);
+
+                // TODO: Use config file to setup the settings
+                SocketListenerSettings theSocketListenerSettings = new SocketListenerSettings(MAX_CONNECTIONS,
+                    ALLOW_EXCESS_SAEA, BACKLOG_SIZE, MAX_ACCEPT_OPS,
+                    RECEIVE_PREFIX_LENGTH, TEST_BUFFER_SIZE, SEND_PREFIX_LENGTH, BUFFER_MANAGERS,
+                    localEndPoint);
+
+                SocketListener socketListener = new SocketListener(theSocketListenerSettings);
+
             }
             catch (Exception ex)
             {
