@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHE.Socket", "SHE.Socket\SHE.Socket.csproj", "{5D4D3667-BBEF-4200-B41D-A0385507EF2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHE.GprsSocket", "SHE.Socket\SHE.GprsSocket.csproj", "{5D4D3667-BBEF-4200-B41D-A0385507EF2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
