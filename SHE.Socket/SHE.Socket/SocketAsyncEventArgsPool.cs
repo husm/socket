@@ -48,6 +48,19 @@ namespace SHE.GprsSocket
         }
 
         /// <summary>
+        /// Removes a SocketAsyncEventArgs instance from the pool.
+        /// returns 
+        /// </summary>
+        /// <returns></returns>
+        internal SocketAsyncEventArgs Pop()
+        {
+            lock (this.pool)
+            {
+                return this.pool.Pop();
+            }
+        }
+
+        /// <summary>
         /// Add a SocketAsyncEventArg instance to the pool.
         /// "item" = SocketAsyncEventArgs instance to add to the pool.
         /// </summary>
