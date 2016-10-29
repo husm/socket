@@ -37,7 +37,8 @@ namespace SHE.GprsSocket
             theDataHolder.sessionId = receiveToken.SessionId;
             theDataHolder.receivedTransMissionId = this.ReceivedTransMissionIdGetter();
             theDataHolder.remoteEndPoint = this.GetRemoteEndpoint();
-            
+            this.AddDataHolder();
+            return theDataHolder;
         }
 
         private void AddDataHolder()

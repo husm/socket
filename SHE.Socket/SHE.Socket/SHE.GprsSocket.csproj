@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcceptOpUserToken.cs" />
     <Compile Include="BufferManager.cs" />
     <Compile Include="DataHolder.cs" />
     <Compile Include="DataHoldingUserToken.cs" />
